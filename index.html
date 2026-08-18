@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Munafa Capital</title>
+<meta name="description" content="Munafa Capital — website launching soon.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💰</text></svg>">
+<style>
+  :root {
+    --bg: #0a1128;
+    --bg-2: #0f1b3d;
+    --gold: #c9a04d;
+    --gold-light: #e6c878;
+    --text: #f4f1ea;
+    --text-dim: #9aa3bd;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    height: 100%;
+  }
+  body {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    background: radial-gradient(circle at 50% 20%, var(--bg-2), var(--bg) 70%);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  .bg-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(201,160,77,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,160,77,0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(circle at 50% 40%, black, transparent 75%);
+    pointer-events: none;
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 2rem;
+    max-width: 640px;
+  }
+  .mark {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 1.75rem;
+    border: 1.5px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.9rem;
+    color: var(--gold-light);
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+  }
+  h1 {
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: var(--text);
+    margin-bottom: 0.6rem;
+  }
+  h1 span {
+    color: var(--gold-light);
+  }
+  .tagline {
+    font-size: 0.95rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2.75rem;
+  }
+  .divider {
+    width: 56px;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 auto 2.75rem;
+    opacity: 0.6;
+  }
+  .status {
+    font-size: 1.15rem;
+    color: var(--text);
+    margin-bottom: 0.85rem;
+    letter-spacing: 0.02em;
+  }
+  .status-sub {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    max-width: 440px;
+    margin: 0 auto 2.5rem;
+  }
+  .contact {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+  }
+  .contact a {
+    color: var(--gold-light);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(230, 200, 120, 0.35);
+    padding-bottom: 2px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .contact a:hover {
+    color: var(--text);
+    border-color: var(--text);
+  }
+  footer {
+    position: absolute;
+    bottom: 1.75rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    letter-spacing: 0.08em;
+    opacity: 0.6;
+  }
+</style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="container">
+    <div class="mark">M</div>
+    <h1>Munafa <span>Capital</span></h1>
+    <div class="tagline">Capital, Managed with Purpose</div>
+    <div class="divider"></div>
+    <p class="status">We're building something new.</p>
+    <p class="status-sub">Our website is currently in the works. Check back soon to learn more about who we are and what we do.</p>
+    <p class="contact">Get in touch — <a href="mailto:info@munafacapital.com">info@munafacapital.com</a></p>
+  </div>
+  <footer>&copy; <span id="year"></span> Munafa Capital. All rights reserved.</footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
