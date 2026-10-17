@@ -296,6 +296,14 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    document.querySelector('.brand').addEventListener('click', (e) => {
+      if (location.pathname !== '/' && location.pathname !== '/index.html') return;
+      e.preventDefault();
+      const calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      window.scrollTo({ top: 0, behavior: calm ? 'auto' : 'smooth' });
+      if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    });
+
     const form = document.getElementById('inquiry-form');
     const status = document.getElementById('form-status');
     const button = form.querySelector('button[type="submit"]');
